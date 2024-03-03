@@ -1,0 +1,89 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding-top: 1rem;
+    border-radius: 2rem;
+}
+.header img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 3rem;
+}
+.container{
+    background-color: black;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    gap: 2rem;
+    padding:1rem;
+    border-radius: 2rem;
+}
+.stats{
+    display: flex;
+    flex-direction:row;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+h2{
+    margin: 0;
+}
+.stats p{
+    margin: 1.2rem;
+}
+.stats h3{
+    margin: 1rem;
+}
+.actions button{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.actions button:hover{
+    background-color: #45a049;
+}
+.logout{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #f44336;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: none;
+    width: 6rem;
+    height: 4rem;
+}
+.logout:hover{
+    background-color: #bd5d56;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+.data h2{
+    width: max-content;
+}
+.data img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+}

@@ -1,0 +1,100 @@
+form div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+input{
+    width: 20rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.button{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    background-color: rgb(110, 53, 172);
+    color: white;
+    border: none;
+}
+.button:hover{
+    background-color: rgb(118, 81, 157);
+    color: white;
+    border: none;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 2rem;
+}
+.link:hover{
+    color: rgb(105, 101, 198);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: .5s;
+}
+.registration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(35, 34, 34);
+    height: 46rem;
+    width: 30rem;
+    border-radius: 2rem;
+}
+.registration form{
+    display: flex;
+    height: 40rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.container{
+    background-color: rgb(35, 34, 34);
+    height:30rem;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.expand{
+    background-color: rgb(35, 34, 34);
+    height: 46rem;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 2rem;
+    padding-bottom: .5rem;
+}
+.message{
+    color: red;
+    font-size: 1rem;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: rgb(103, 46, 163);
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
