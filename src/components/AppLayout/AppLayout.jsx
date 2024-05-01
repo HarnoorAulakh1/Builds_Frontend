@@ -34,13 +34,13 @@ function AppLayout() {
   return (
     <>
       {posts != 0 && (
+        <> <div className={class1}>
+        <Reveal3></Reveal3>
+      </div>
         <div className={styles.container}>
           {/* <div className={styles.nav}>
             <Navbar />
           </div> */}
-          <div className={class1}>
-            <Reveal3></Reveal3>
-          </div>
           <div className={styles.app}>
             <div className={styles.visible}>
               <Navbar1 />
@@ -60,7 +60,8 @@ function AppLayout() {
             </div>
             <Outlet />
           </div>
-        </div>
+        </div></>
+       
       )}
     </>
   );

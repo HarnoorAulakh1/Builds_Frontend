@@ -208,9 +208,9 @@
         border:0;
     }
     .bar{
-        bottom: 4rem;
+        bottom: 0rem;
     }
     .bottom{
-        padding: 5rem;
+        padding: 3rem;
     }
 }
