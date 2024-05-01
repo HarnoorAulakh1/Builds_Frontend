@@ -30,7 +30,7 @@ function Reveal3({ children }) {
         className={styles.motion3}
         variants={{
           visible1: { opacity: 0 },
-          hidden: { y: -400, opacity: 0,},
+          hidden: { y: -380, opacity: 0,},
           visible: { y: 0, opacity: 1,},
         }}
         animate={control}
