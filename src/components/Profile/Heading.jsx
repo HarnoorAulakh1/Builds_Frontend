@@ -43,7 +43,7 @@ function Heading() {
         </div>
         <div>
           <p>{data1.length}</p>
-          <p>100</p>
+          <p>---</p>
           </div>
       </div>
       <div className={styles.actions}>
