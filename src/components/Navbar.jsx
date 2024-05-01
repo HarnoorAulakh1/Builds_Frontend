@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Addpost", "Logout"];
 import axios from "axios";
+import Bar from "./Search/Bar";
+import zIndex from "@mui/material/styles/zIndex";
 
 function Navbar() {
   // eslint-disable-next-line no-unused-vars
@@ -29,12 +31,12 @@ function Navbar() {
 
   const handle = async(x) => {
     if (x === "Profile") {
-      navigate("/profile");
+      navigate(`/profile/${username}`);
     } else if (x === "Logout") {
       const x=await axios.post("/api/user/logout");
-      navigate("/app");
       console.log(x);
-      //dispatch(setprofile({_id: "", username: "", photo: "", email: "",last:"",first:"",phno:"",bio:""}));
+      dispatch(setprofile({isAuthenticated:"false",_id: "", username: "", photo: "", email: "",last:"",first:"",phno:"",bio:""}));
+      navigate("/app");
     }
     else if (x === "Addpost") {
       navigate("/addpost");
@@ -54,9 +56,10 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#312e81" }}>
+    <AppBar position="static" sx={{backgroundColor: "#312e81",height:"4rem"}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{display:"flex",flexDirection:"row",gap:"30%",height:"4rem",alignItems:"baseline",padding:"1rem"}}>
+          <div style={{display:"flex",flexDirection:"row"}}>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -75,8 +78,9 @@ function Navbar() {
           >
             BUILDS
           </Typography>
+          </div>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
                 <Button
                 key={page}
@@ -86,9 +90,9 @@ function Navbar() {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 ,position:"absolute",right:"0"}}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src={photo} /><p style={{color:"white"}}>{"  "+username}</p>

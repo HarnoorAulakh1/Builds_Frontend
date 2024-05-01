@@ -24,7 +24,7 @@ const profileSlice = createSlice({
             state.last = action.payload.last;
             state.phno = action.payload.phno;
             state.photo = action.payload.photo;
-            state.isAuthenticated = true; 
+            state.isAuthenticated = action.payload.isAuthenticated; 
             state.bio = action.payload.bio;
         },
         setbio: (state, action) => {

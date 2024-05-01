@@ -17,7 +17,6 @@ function Comments({post_id}) {
             photo:photo,
             comment:state
         }
-        console.log (data);
         await axios.post("/api/post/addcomments",data)
         .then(res=>{
           console.log(res.data);
@@ -27,12 +26,13 @@ function Comments({post_id}) {
         setstate("");
     }
     useEffect(() => {
-        axios.get(`/api/post/getcomments/:${post_id}`)
+        axios.get(`/api/post/getcomments/${post_id}`)
         .then(res=>setComments(res.data))
         .catch(err=>console.log(err));
+        console.log(comments);
     },[])
   return (
-    <div className={styles.comments}>
+    <div className={styles.containerComment}>
         <div>
         <form className={styles.account} onSubmit={handleSubmit}>
             <textarea value={state} onChange={(e)=>setstate(()=>e.target.value)} type="text" />

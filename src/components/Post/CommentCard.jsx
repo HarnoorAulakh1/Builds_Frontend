@@ -42,7 +42,7 @@ function CommentCard({comment }) {
           style={{
             display: "flex",
             flexDirection: "row",
-            gap: "2rem",
+            gap: "5rem",
             height: "2rem",
           }}
         >

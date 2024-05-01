@@ -4,14 +4,14 @@ import List from "./List";
 
 function Menu({ data ,click}) {
   const menu = ["Edit", "Delete"];
-  const { _id } = useSelector((state) => state.profile);
+  const { _id ,username} = useSelector((state) => state.profile);
 const [display, set] = useState(false);
   function expand() {
     set(!display);
   }
   return (
     <>
-      {data.user_id == _id && (
+      {data.username == username ? (
         <div onClick={expand}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const [display, set] = useState(false);
           </div>
           </div>
         </div>
-      )}
+      ):<div>    </div>}
     </>
   );
 }

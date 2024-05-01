@@ -15,7 +15,7 @@ const initialState = {
 };
 function AddPost() {
   const navigate = useNavigate();
-  const { username, email, last, first, photo } = useSelector(
+  const { _id,username, email, last, first, photo } = useSelector(
     (state) => state.profile
   );
   const [state, set] = useState(initialState);
@@ -38,6 +38,7 @@ function AddPost() {
         "/api/post/addpost",
         {
           ...state,
+          user_id: _id,
           username: username,
           last: last,
           first: first,

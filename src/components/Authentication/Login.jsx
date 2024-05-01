@@ -1,28 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./auth.module.css";
 import axios from "axios";
 import { setprofile } from "../../Redux/profileSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Reveal from "/src/components/reveal/Reveal.jsx";
+import Reveal1 from "../reveal/Reveal1";
+import Reveal2 from "../reveal/Reveal2";
 
 const initial = { username: "", password: "" };
-function Login({ set }) {
+function Login({ set, setRefresh }) {
   const navigate = useNavigate();
   const [state, setstate] = useState(initial);
   const [message, setmessage] = useState("");
+  const {_id}=useSelector((state)=>state.profile);
   const dispatch = useDispatch();
-  function handlesubmit(e) {
+  useEffect(() => {
+    if (_id) {
+      navigate("/app");
+    }
+  }
+  ,[_id,navigate]);
+  async function handlesubmit(e) {
     e.preventDefault();
-    axios
+    await axios
       .post("/api/user/login", state)
       .then((res) => {
-        console.log(typeof res.data);
         if (res.data == "0") {
           setmessage("Invalid Credentials");
         } else {
           setmessage("");
-          console.log(res.data);
-          dispatch(setprofile(res.data));
+          dispatch(setprofile({ ...res.data, isAuthenticated: true }));
           navigate("/app");
           //localStorage.setItem("profile", JSON.stringify(res.data));
         }
@@ -34,34 +43,48 @@ function Login({ set }) {
   }
   return (
     <div className={styles.login}>
-      <h1>Login</h1>
+      <Reveal keyz>
+        <h1>Login</h1>
+      </Reveal>
       <div className={styles.message}>
         <p>{message}</p>
       </div>
       <form onSubmit={handlesubmit}>
         <div>
-          <label>Username</label>
-          <input
-            value={state.username}
-            onChange={(e) => setstate({ ...state, username: e.target.value })}
-            type="text"
-          />
+          <Reveal>
+            <label>Username</label>
+          </Reveal>
+          <Reveal1>
+            <input
+              value={state.username}
+              onChange={(e) => setstate({ ...state, username: e.target.value })}
+              type="text"
+            />
+          </Reveal1>
         </div>
         <div>
-          <label>Password</label>
-          <input
-            value={state.password}
-            onChange={(e) => setstate({ ...state, password: e.target.value })}
-            type="password"
-          />
+          <Reveal>
+            <label>Password</label>
+          </Reveal>
+          <Reveal2>
+            <input
+              value={state.password}
+              onChange={(e) => setstate({ ...state, password: e.target.value })}
+              type="password"
+            />
+          </Reveal2>
         </div>
-        <button className={styles.button} type="submit">
-          submit
-        </button>
+        <Reveal1>
+          <button className={styles.button} type="submit">
+            submit
+          </button>
+        </Reveal1>
       </form>
-      <div onClick={() => set((x) => !x)} className={styles.link}>
-        <p>not yet registered?</p>
-      </div>
+      <Reveal>
+        <div onClick={() => set((x) => !x)} className={styles.link}>
+          <p>not yet registered?</p>
+        </div>
+      </Reveal>
     </div>
   );
 }

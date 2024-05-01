@@ -1,0 +1,143 @@
+
+.messagesContainer{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-top-left-radius: 2rem;
+  }
+   .collapse{
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+    text-align: center;
+    background-color: #020617;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .expand{
+    background-color: #020617;
+    height: 100%;
+    width: 25rem;
+    text-align: center;
+    overflow: auto;
+    transition: width 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    align-items: center;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #1e293b;
+    width: 80%;
+    height: 8%;
+    align-items: center;
+    border-radius: 1rem;
+    position: sticky;
+    top:1rem;
+    opacity: 0.9;
+  }
+.notactive{
+    color: rgb(161, 156, 156);
+    text-decoration: none;
+    margin: 1rem;
+    transition: .2s;
+}
+.isactive{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 1rem;
+    transition: .2s;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1e293b;
+    border-radius: 2rem;
+    width: 70%;
+    filter: drop-shadow(.3rem .3rem .5rem #64748b);
+    transition: .2s;
+    position: relative;
+}
+.img{
+    width:3em;
+    height: 3rem;
+    border-radius: 5rem;
+    margin: 1rem;
+}
+h3{
+    text-align: left;
+    margin: .1rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    height: 75%;
+    overflow: auto;
+    padding-bottom:2rem;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 2rem;
+    width: max-content;
+    justify-content: center;
+}
+.actions button{
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem;
+    transition: .2s;
+}
+.actions button:hover{
+    background-color: #0d1640;
+    cursor: pointer;
+}
+.cross{
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    transition: .2s;
+}
+.card p{
+    margin: 0;
+    text-align: left;
+}
+.card button:hover{
+    background-color: #0d1640;
+    cursor: pointer;
+}
+
+.chats{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    padding: 1rem;
+    overflow: auto;
+}
+.chats::-webkit-scrollbar {
+    display: none;
+}
