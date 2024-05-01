@@ -7,9 +7,9 @@ import { useNavigate } from 'react-router-dom';
 export function LampDemo() {
     const navigate = useNavigate();
   return (
-    <LampContainer>
+    <LampContainer >
       <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0.5, y: 100}}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,

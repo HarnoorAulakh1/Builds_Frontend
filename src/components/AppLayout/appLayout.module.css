@@ -98,7 +98,7 @@
   }
   .navbar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: max-content;
@@ -118,7 +118,7 @@
   }
   .contract {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: max-content;
     width: 0;
@@ -149,5 +149,8 @@
   .scroll{
     width: 100%;
     height: max-content;
+  }
+  .container{
+    height: 80%;
   }
 }

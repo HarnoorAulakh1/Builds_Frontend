@@ -207,4 +207,10 @@
     .layout{
         border:0;
     }
+    .bar{
+        bottom: 4rem;
+    }
+    .bottom{
+        padding: 5rem;
+    }
 }

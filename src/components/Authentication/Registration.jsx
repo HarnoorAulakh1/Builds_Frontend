@@ -43,8 +43,8 @@ function Registration({ set }) {
           },
         }
       )
-      .then((res) => console.log("hello " + res.data))
-      .catch((err) => console.log(err));
+      .then((res) => alert(res.data))
+      .catch((err) => alert(err.message));
     set((x) => !x);
     setloading(false);
     setstate(initialState);

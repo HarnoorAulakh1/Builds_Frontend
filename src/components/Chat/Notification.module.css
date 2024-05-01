@@ -64,7 +64,7 @@
     align-items: center;
     background-color: #1e293b;
     border-radius: 2rem;
-    width: 70%;
+    width: 50%;
     filter: drop-shadow(.3rem .3rem .5rem #64748b);
     transition: .2s;
     position: relative;
@@ -140,4 +140,11 @@ h3{
 }
 .chats::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width: 600px) {
+    .card{
+        width: 90%;
+        gap: 1rem;
+    }
 }

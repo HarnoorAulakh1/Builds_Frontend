@@ -240,6 +240,7 @@ textarea {
 }
 textarea:focus {
   background-color: #eaeaea;
+  color: #000000;
 }
 textarea::-webkit-scrollbar {
   display: none;

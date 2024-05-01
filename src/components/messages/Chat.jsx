@@ -64,10 +64,8 @@ function Chat() {
           {message.map((y) => (
             <Message data={data} message={y} key={y._id} />
           ))}
-          <div ref={bottom}></div>
-        </div>
-      )}
-      <form onSubmit={handle}>
+          <div className={styles.bottom} ref={bottom}></div>
+          <form onSubmit={handle}>
         <div className={styles.bar}>
           <input type="text" placeholder="Message" />
           <button type="submit">
@@ -77,6 +75,8 @@ function Chat() {
           </button>
         </div>
       </form>
+        </div>
+      )}
     </div>
   );
 }
