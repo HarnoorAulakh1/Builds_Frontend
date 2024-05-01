@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       {islogedin ? (
-        <Outlet />
+        <Outlet/>
       ) : (
         <div className={styles.home}>
-          <LampDemo />
+          <LampDemo/>
         </div>
       )}
     </>

@@ -132,8 +132,6 @@ input {
   height: 100%;
   border: 1px solid black;
   border-radius: 2rem;
-  background: #de6829;
-  background: linear-gradient(top, #648880, #293f50 90%);
 }
 .white{
     background-color: white;
