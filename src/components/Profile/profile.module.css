@@ -106,8 +106,8 @@ h2{
     height: 70rem;
 }
 .effect{
-    display: grid;
-    grid-template-columns:auto auto;
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
     gap: .5rem;
     z-index: 1;

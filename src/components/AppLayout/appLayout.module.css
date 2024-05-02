@@ -83,6 +83,9 @@
 .menudiv {
   display: none;
 }
+.outlet{
+  overflow: auto;
+}
 @media (max-width: 1000px) {
   .feed{
     padding-bottom: 10rem;
