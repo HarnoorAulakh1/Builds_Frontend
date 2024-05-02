@@ -89,6 +89,7 @@
 @media (max-width: 1000px) {
   .feed{
     padding-bottom: 10rem;
+    height: 90%;
   }
   .outlet{
     margin-top: 3rem;
