@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
-function Comments({post_id}) {
+function Comments({post_id,user_id}) {
     const [state, setstate] = useState("");
     const [comments, setComments] = useState([]);
     const {username,photo,_id} =useSelector((state)=>state.profile);
      async function handleSubmit(e) {
         e.preventDefault();
         const data={
+          sendto:user_id,
             post_id:post_id,
             user_id:_id,
             username:username,

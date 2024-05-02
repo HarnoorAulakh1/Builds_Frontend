@@ -5,11 +5,11 @@ import Comments from "./Comments";
 
 function PostZoom() {
     const post=useLoaderData();
-    console.log("PostZoom",post);
+    //console.log("PostZoom",post);
     return(
         <div className={styles.container1}>
         <Post post={post}/>
-        <Comments post_id={post._id}/>
+        <Comments post_id={post._id} user_id={post.user_id}/>
         </div>
     )
 }

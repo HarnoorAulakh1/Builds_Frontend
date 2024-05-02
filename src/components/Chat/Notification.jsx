@@ -11,6 +11,7 @@ function Notification() {
     let x;
     const ex = async () => {
       const res = await axios.get(`/api/user/getNotification?id=${_id}`);
+      console.log(res.data);
       set(res.data);
     };
     if(_id=="") return;
