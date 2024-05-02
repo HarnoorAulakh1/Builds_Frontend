@@ -12,10 +12,9 @@ function Chat() {
   const [message, setMessage] = useState(messages);
   const ref = useRef();
   const bottom = useRef();
-  useEffect(() => { 
-    bottom.current.scrollIntoView({ behavior: "smooth", block: "end"});
-  }
-    , []);
+  useEffect(() => {
+    bottom.current.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, []);
   useEffect(() => {
     ref.current.addEventListener("DOMNodeInserted", (event) => {
       const { currentTarget: target } = event;
@@ -27,7 +26,6 @@ function Chat() {
       );
       //console.log("hello", response.data);
       setMessage(() => {
-        console.log("state changed", message.length);
         return response.data;
       });
     }, 3000);
@@ -66,15 +64,15 @@ function Chat() {
           ))}
           <div className={styles.bottom} ref={bottom}></div>
           <form onSubmit={handle}>
-        <div className={styles.bar}>
-          <input type="text" placeholder="Message" />
-          <button type="submit">
-            <div className={styles.send}>
-              <BsSend size="2rem" color="white" />
+            <div className={styles.bar}>
+              <input type="text" placeholder="Message" />
+              <button type="submit">
+                <div className={styles.send}>
+                  <BsSend size="2rem" color="white" />
+                </div>
+              </button>
             </div>
-          </button>
-        </div>
-      </form>
+          </form>
         </div>
       )}
     </div>

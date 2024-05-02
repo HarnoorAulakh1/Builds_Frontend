@@ -58,7 +58,8 @@ function AppLayout() {
               <br />
               <Navbar1 />
             </div>
-            <Outlet />
+            <div className={styles.outlet}><Outlet /></div>
+            
           </div>
         </div></>
        

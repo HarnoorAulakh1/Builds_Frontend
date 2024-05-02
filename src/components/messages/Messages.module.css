@@ -196,21 +196,19 @@
         width: 100%;
     }
     .container1{
-        width: 70%;
-    }
-    .layout{
         width: 90%;
     }
+    .layout{
+        width: 100%;
+        padding:0 1rem 0 1rem;
+    }
     .chatSection{
-        height: 30rem;
+        height: 35rem;
     }
     .layout{
         border:0;
     }
     .bar{
         bottom: 0rem;
-    }
-    .bottom{
-        padding: 3rem;
     }
 }

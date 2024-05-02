@@ -92,6 +92,7 @@ function App() {
                   path:"chat/:id",
                   loader: async ({params})=>{
                     var data,messages;
+                    console.log("hello"+params.id);
                     await axios.get(`/api/user/getUserById/${params.id}`).then((res) => {
                       data=res.data;
                     });
@@ -99,6 +100,7 @@ function App() {
                       messages=res.data;
                     }
                     );
+                    console.log("hello1",{...messages});
                     return {data,messages};
                   },
                   element:<Chat/>
