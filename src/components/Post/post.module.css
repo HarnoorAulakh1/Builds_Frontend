@@ -268,4 +268,7 @@ textarea::-webkit-scrollbar {
   textarea {
     width: 15rem;
   }
+  .containerComment{
+    width: 100%;
+  }
 }
