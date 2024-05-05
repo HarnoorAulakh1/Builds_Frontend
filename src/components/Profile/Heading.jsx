@@ -16,7 +16,7 @@ function Heading() {
       navigate("/auth");
     }
   function addPost() {
-    navigate("/addpost");
+    navigate("/app/addpost");
   }
   async function addFriend() {
     console.log("Add Friend");
