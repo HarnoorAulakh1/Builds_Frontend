@@ -22,7 +22,7 @@ function Post({ post }) {
       });
   });
   function showComments() {
-    console.log("post1=", post._id);
+    //console.log("post1=", post._id);
     navigate(`/app/post/${post._id}`);
   }
 
@@ -32,12 +32,12 @@ function Post({ post }) {
       const result = await axios.delete("api/post/deletePost", {
         data: { ...post },
       });
-      console.log(result);
+      //console.log(result);
     }
   }
 
   async function likes() {
-    console.log(like);
+    //console.log(like);
     var inc = like ? -1 : 1;
     await axios
       .put("/api/post/like", {
@@ -55,7 +55,7 @@ function Post({ post }) {
       {!option && (
         <div className={styles.container}>
           <div className={styles.top}>
-            <div className={styles.header1}>
+            <div className={styles.header1} onClick={()=>navigate(`profile/${post.user_id}`)}>
             <Header img={post.photo} name={post.username} />
             </div>
             <div className={styles.menu}>

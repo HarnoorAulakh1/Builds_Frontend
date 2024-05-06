@@ -11,7 +11,7 @@ function Notification() {
     let x;
     const ex = async () => {
       const res = await axios.get(`/api/user/getNotification?id=${_id}`);
-      console.log(res.data);
+      //console.log(res.data);
       set(res.data);
     };
     if(_id=="") return;
@@ -19,7 +19,7 @@ function Notification() {
     return ()=>clearTimeout(x);
   });
   function delete1(_id){
-    console.log(_id,"deleted");
+    //console.log(_id,"deleted");
     set(data.filter((x)=>x._id!==_id));
   }
   return (

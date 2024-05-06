@@ -15,7 +15,17 @@ function Messages() {
       <h1>Messages</h1>
       <div className={styles.container2}>{messages.map((message) => (
         <Card1 data={message} key={message._id}/>
+      ))}
+      {messages.map((message) => (
+        <Card1 data={message} key={message._id}/>
+      ))}
+      {messages.map((message) => (
+        <Card1 data={message} key={message._id}/>
+      ))}
+      {messages.map((message) => (
+        <Card1 data={message} key={message._id}/>
       ))}</div>
+      
       
     </div>)
   );

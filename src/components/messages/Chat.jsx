@@ -48,7 +48,7 @@ function Chat() {
     const response = await axios.post(`/api/message/sendMessage`, ob);
     setMessage([...message, response.data]);
     //bottom.current.scrollIntoView({ behavior: "smooth", block: "end"});
-    console.log(e.target[0].value);
+    //console.log(e.target[0].value);
     form.reset();
   }
   return (

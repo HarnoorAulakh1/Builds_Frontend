@@ -6,7 +6,7 @@ import Display from "./Display";
 function Profile() {
   const { data1 } = useLoaderData();
 
-  console.log(data1);
+  //console.log(data1);
   return (
     <div className={styles.scroll1}>
     <div className={styles.container1}>

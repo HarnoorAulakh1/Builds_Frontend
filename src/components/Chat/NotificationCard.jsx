@@ -12,7 +12,7 @@ function NotificationCard({ data,delete1 }) {
         user_id: data.user_id,
         friend_id: data.profile_link,
       });
-      console.log(response);
+      //console.log(response);
     }
   }
   return (
