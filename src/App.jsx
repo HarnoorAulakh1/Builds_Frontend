@@ -17,6 +17,8 @@ import Chat from "./components/messages/Chat";
 import { useLocation } from "react-router-dom";
 import MessageLayout from "./components/messages/MessageLayout.jsx";
 import Settings from "./components/settings/Settings";
+import { LampDemo } from "./components/reveal/Lamp";
+import styles from "./components/home/Home.module.css";
 
 function App() {
   const { _id } = useSelector((state) => state.profile);
@@ -39,6 +41,13 @@ function App() {
         return data;
       },
       children: [
+        {
+          path: "",
+          element: 
+          <div className={styles.home}>
+          <LampDemo/>
+        </div>,
+        },
         {
           path: "app",
           element: <AppLayout />,
