@@ -22,13 +22,4 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
-  <script>
-    var mode = document.querySelector("#node_env_mode").value;
-    if (
-      mode === "production" &&
-      typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === "object"
-    ) {
-      window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function () {};
-    }
-  </script>
 </html>
