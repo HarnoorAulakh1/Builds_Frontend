@@ -9,16 +9,33 @@ import { useState } from "react";
 import Reveal3 from "../reveal/Reveal3";
 import { IoMenuOutline } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
+import axios from "axios";
 
 function AppLayout() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [class1, setclass] = useState(styles.loading);
   const [visible, setVisible] = useState(false);
-  const posts = useLoaderData();
+  const [posts, setPosts] = useState(-1);
   function handle() {
     setVisible(!visible);
   }
+  useEffect(() => {
+    const data=async () => {
+      var data;
+      await axios
+        .get("/api/post/getpost?pageLimit=2&n=0")
+        .then((res) => {
+          setPosts(res.data);
+        })
+        .catch((err) => {
+          console.log(err.message);
+          return "Error";
+        });
+      return data;
+    }
+    data();
+  }, [posts]);
   useEffect(() => {
     if (posts == 0) navigate("/auth");
     else dispatch(setprofile({ ...posts.user, isAuthenticated: true }));
@@ -31,9 +48,14 @@ function AppLayout() {
       clearTimeout(x);
     };
   }, []);
+
+  if(posts==-1) return(<div className={class1}>
+    <h1>Loading......</h1>
+  </div>);
+
   return (
     <>
-      {posts != 0 && (
+      {(posts != 0 && posts!=-1) && (
         <> <div className={class1}>
         <Reveal3></Reveal3>
       </div>
