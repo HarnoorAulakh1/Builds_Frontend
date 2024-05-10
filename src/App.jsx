@@ -26,20 +26,20 @@ function App() {
     {
       path: "/",
       element: <Home />,
-      loader: async () => {
-        var data;
-        await axios
-          .get("/api/user/checklogin")
-          .then((res) => {
-            //console.log(res.data);
-            data = res.data;
-          })
-          .catch((err) => {
-            console.log(err.message);
-            return "Error";
-          });
-        return data;
-      },
+      // loader: async () => {
+      //   var data;
+      //   await axios
+      //     .get("/api/user/checklogin")
+      //     .then((res) => {
+      //       //console.log(res.data);
+      //       data = res.data;
+      //     })
+      //     .catch((err) => {
+      //       console.log(err.message);
+      //       return "Error";
+      //     });
+      //   return data;
+      // },
       children: [
         {
           path: "",
