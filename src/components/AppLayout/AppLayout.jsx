@@ -49,7 +49,7 @@ function AppLayout() {
     };
   }, []);
 
-  if(posts==-1) return(<div className={class1}>
+  if(posts==-1) return(<div className={styles.loading}>
     <h1>Loading......</h1>
   </div>);
 
