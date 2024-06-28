@@ -1,2 +1,2 @@
-/api/*  http://54.163.26.124:3000/:splat  200!
+/api/*  https://builds-backend-1.onrender.com  200!
 /* /index.html 200
