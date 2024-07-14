@@ -11,7 +11,7 @@ export default defineConfig({
       //   rewrite: (path) => path.replace(/^\/api/, ''),
       // },
       '/api': {
-        target: 'https://builds-backend-1.onrender.com',
+        target: 'http://localhost:3000/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

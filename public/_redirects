@@ -1,2 +1,2 @@
-/api/*  https://builds-backend-1.onrender.com  200!
+/api/*  https://builds-backend-1.onrender.com/:splat  200!
 /* /index.html 200
