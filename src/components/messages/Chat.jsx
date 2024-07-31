@@ -14,14 +14,14 @@ function Chat() {
   const bottom = useRef();
   const [socket, setSocket] = useState(null);
   useEffect(() => {
-    const newSocket = new WebSocket(`ws://localhost:8080/?senderId=${_id}`);
+    const newSocket = new WebSocket(`ws://builds-backend-1.onrender.com:8080/?senderId=${_id}`);
     newSocket.onopen = () => {
       console.log("Connection established");
-      newSocket.send(JSON.stringify({message:"Hello Server!"}));
+      newSocket.send(JSON.stringify({ message: "Hello Server!" }));
     };
     newSocket.onmessage = (message) => {
       // console.log("Message received:", Object.keys(JSON.parse(message.data)).length,JSON.parse(message.data));
-      if (Object.keys(JSON.parse(message.data)).length==6) {
+      if (Object.keys(JSON.parse(message.data)).length == 6) {
         setMessage((x) => {
           return [...x, JSON.parse(message.data)];
         });
