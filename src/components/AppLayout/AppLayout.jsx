@@ -35,7 +35,7 @@ function AppLayout() {
       return data;
     }
     data();
-  }, [posts]);
+  }, []);
   useEffect(() => {
     if (posts == 0) navigate("/auth");
     else dispatch(setprofile({ ...posts.user, isAuthenticated: true }));
