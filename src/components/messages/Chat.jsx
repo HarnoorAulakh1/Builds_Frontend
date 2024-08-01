@@ -14,7 +14,7 @@ function Chat() {
   const bottom = useRef();
   const [socket, setSocket] = useState(null);
   useEffect(() => {
-    const newSocket = new WebSocket(`/ws/?senderId=${_id}`);
+    const newSocket = new WebSocket(`wss://builds-backend-1.onrender.com/?senderId=${_id}`);
     newSocket.onopen = () => {
       console.log("Connection established");
       newSocket.send(JSON.stringify({message:"Hello Server!"}));
